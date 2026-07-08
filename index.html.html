@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>गाउँले मिडिया | Gaunle Media</title>
+
+<!-- नेपाली फन्ट -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nepali:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Noto Sans Nepali', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background: #b30000;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #ffcc00;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin: 5px 0 0 0;
+}
+nav {
+    background: #222;
+    padding: 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #b30000;
+    border-radius: 4px;
+}
+
+/* ब्रेकिङ न्युज सार्ने एनिमेसन (Ticker) */
+.breaking-container {
+    background: #ffcc00;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 0;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+}
+.breaking-label {
+    background: #b30000;
+    color: white;
+    padding: 0 20px;
+    position: absolute;
+    z-index: 5;
+}
+.breaking-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* विज्ञापन राख्ने ठाउँ */
+.ad-banner {
+    background: #e2e8f0;
+    border: 2px dashed #cbd5e1;
+    color: #64748b;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.hero {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #b30000;
+}
+.news-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+.card h3 {
+    margin-top: 0;
+    color: #b30000;
+    font-size: 1.3rem;
+}
+footer {
+    background: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>गाउँले मिडिया</h1>
+<p>Gaunle Media</p>
+<p><strong>गाउँदेखि संसारसम्म, सत्य समाचार।</strong></p>
+</header>
+
+<nav>
+<a href="#">होम</a>
+<a href="#">ताजा समाचार</a>
+<a href="#">स्थानीय</a>
+<a href="#">राष्ट्रिय</a>
+<a href="#">खेलकुद</a>
+<a href="#">शिक्षा</a>
+<a href="#">सम्पर्क</a>
+</nav>
+
+<!-- गुड्ने ब्रेकिङ न्युज -->
+<div class="breaking-container">
+    <div class="breaking-label">🔴 ब्रेकिङ:</div>
+    <div class="breaking-text">
+        &nbsp;&nbsp;&nbsp;&nbsp; स्थानीय गाउँपालिकामा नयाँ खानेपानी आयोजनाको उद्घाटन सम्पन्न... 
+        || &nbsp;&nbsp;&nbsp;&nbsp; मौसम पूर्वानुमान: आगामी तीन दिन हिमाली क्षेत्रमा भारी वर्षाको सम्भावना... 
+        || &nbsp;&nbsp;&nbsp;&nbsp; जिल्ला स्तरीय भलिबल प्रतियोगिता भोलिदेखि सुरु हुँदै...
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- विज्ञापन ब्यानर -->
+    <div class="ad-banner">
+        विज्ञापनको लागि यहाँ सम्पर्क गर्नुहोस (गाउँले मिडिया विज्ञापन बोर्ड)
+    </div>
+
+    <!-- मुख्य समाचार -->
+    <div class="hero">
+        <h2>मुख्य समाचार: गाउँमा पुग्यो थप विकास, स्थानीय बासिन्दामा उत्साह</h2>
+        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&auto=format&fit=crop&q=80" alt="विकास" class="news-img">
+        <p>यो स्थानमा दिनको सबैभन्दा प्रमुख र महत्वपूर्ण समाचारको विस्तृत विवरण प्रकाशित हुनेछ। स्थानीय स्तरमा भइरहेका सकारात्मक परिवर्तन, कृषि क्रान्ति र विकासका कामहरूलाई हामी सधैँ पहिलो प्राथमिकता दिनेछौँ। गाउँकै युवाहरूको सक्रियतामा आज नयाँ सडक निर्माणको काम पूरा भएको छ।</p>
+    </div>
+
+    <!-- अन्य समाचारहरू -->
+    <div class="news">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd4dcd2?w=500&auto=format&fit=crop&q=80" alt="स्थानीय">
+            <h3>स्थानीय समाचार</h3>
+            <p>हाम्रो गाउँ-समाजका ताजा गतिविधि, जात्रा, संस्कृति र स्थानीय समस्याहरूका बारेमा तयार पारिएको विशेष रिपोर्ट यहाँ पढ्न सक्नुहुन्छ।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1495020689067-958852a6565d?w=500&auto=format&fit=crop&q=80" alt="राष्ट्रिय">
+            <h3>राष्ट्रिय समाचार</h3>
+            <p>देशभरका मुख्य-मुख्य राजनीतिक, आर्थिक तथा सामाजिक घटनाक्रमहरूको सँगालो र राजधानीका ताजा अपडेटहरू यहाँ प्रस्तुत गरिनेछ।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=500&auto=format&fit=crop&q=80" alt="शिक्षा">
+            <h3>शिक्षा र चेतना</h3>
+            <p>गाउँका सामुदायिक विद्यालयहरूको अवस्था, नयाँ शैक्षिक प्रविधि र विद्यार्थीहरूका लागि उपयोगी जानकारीहरू।</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&auto=format&fit=crop&q=80" alt="खेलकुद">
+            <h3>खेलकुद गतिविधि</h3>
+            <p>स्थानीय स्तरमा हुने स्थानीय खेलकुद प्रतियोगितादेखि राष्ट्रिय तथा अन्तर्राष्ट्रिय खेलकुदका ताजा अपडेटहरू।</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+© 2026 Gaunle Media | गाउँले मिडिया नेटवर्क। सबै अधिकार सुरक्षित।
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मुख्य समाचार: गाउँमा पुग्यो थप विकास | Gaunle Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nepali:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Noto Sans Nepali', Arial, sans-serif; background: #f4f6f9; color: #333; line-height: 1.6; }
+header { background: #b30000; color: #fff; padding: 30px 20px; text-align: center; border-bottom: 4px solid #ffcc00; }
+header h1 { margin: 0; font-size: 2.5rem; }
+header p { margin: 5px 0 0 0; }
+nav { background: #222; padding: 5px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+nav a { color: white; text-decoration: none; margin: 5px 15px; font-weight: bold; display: inline-block; padding: 8px 12px; transition: 0.3s; }
+nav a:hover { background: #b30000; border-radius: 4px; }
+.container { width: 90%; max-width: 900px; margin: auto; background: white; padding: 30px; margin-top: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.meta-info { color: #666; font-size: 0.9rem; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.news-full-img { width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: 6px; margin-bottom: 20px; }
+.news-content p { font-size: 1.1rem; margin-bottom: 20px; text-align: justify; }
+.back-btn { display: inline-block; background: #b30000; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 20px; transition: 0.3s; }
+.back-btn:hover { background: #222; }
+footer { background: #222; color: #bbb; text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+<h1>गाउँले मिडिया</h1>
+<p>Gaunle Media</p>
+</header>
+<nav>
+<a href="index.html">होम</a>
+<a href="news.html">ताजा समाचार</a>
+<a href="#">स्थानीय</a>
+<a href="#">राष्ट्रिय</a>
+<a href="#">खेलकुद</a>
+<a href="#">शिक्षा</a>
+<a href="contact.html">सम्पर्क</a>
+</nav>
+<div class="container">
+    <h1>गाउँमा पुग्यो थप विकास, स्थानीय बासिन्दामा उत्साह</h1>
+    <div class="meta-info">
+        <span>🗓 प्रकाशित मिति: २०८३ असार २४ गते</span> | <span>✍️ गाउँले संवाददाता</span>
+    </div>
+    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&auto=format&fit=crop&q=80" alt="विकास" class="news-full-img">
+    <div class="news-content">
+        <p><strong>गाउँले मिडिया, समाचार डेस्क:</strong> स्थानीय गाउँपालिकाको सक्रियता र स्थानीय बासिन्दाहरूको जनश्रमदानबाट गाउँमा नयाँ विकास निर्माणका कामहरू द्रुत गतिमा अगाडि बढेका छन्। लामो समयदेखि यातायातको पहुँचबाट टाढा रहेको यस विकट गाउँमा नयाँ सडक सञ्जाल जोडिएपछि स्थानीयहरूमा खुसीयाली छाएको छ।</p>
+        <p>सडक निर्माण भएसँगै अब गाउँमा उत्पादित कृषि सामग्री, तरकारी तथा फलफूलहरू सहजै बजारसम्म पुर्‍याउन सकिने भएको छ। यसले गर्दा गाउँको आर्थिक अवस्था सुध्रिने र युवाहरू स्वरोजगार बन्ने विश्वास लिइएको छ।</p>
+        <p>स्थानीय जनप्रतिनिधिका अनुसार आगामी बजेटमा खानेपानी र शिक्षाको क्षेत्रलाई मुख्य प्राथमिकता दिइनेछ। "हाम्रो लक्ष्य गाउँलाई आत्मनिर्भर र आधुनिक बनाउनु हो," उहाँले भन्नुभयो।</p>
+    </div>
+    <a href="index.html" class="back-btn">⬅️ होम पेजमा फर्कनुहोस्</a>
+</div>
+<footer>© 2026 Gaunle Media | सबै अधिकार सुरक्षित।</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सम्पर्क गर्नुहोस् | Gaunle Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nepali:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Noto Sans Nepali', Arial, sans-serif; background: #f4f6f9; color: #333; line-height: 1.6; }
+header { background: #b30000; color: #fff; padding: 30px 20px; text-align: center; border-bottom: 4px solid #ffcc00; }
+header h1 { margin: 0; font-size: 2.5rem; }
+header p { margin: 5px 0 0 0; }
+nav { background: #222; padding: 5px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+nav a { color: white; text-decoration: none; margin: 5px 15px; font-weight: bold; display: inline-block; padding: 8px 12px; transition: 0.3s; }
+nav a:hover { background: #b30000; border-radius: 4px; }
+.container { width: 90%; max-width: 1000px; margin: auto; margin-top: 30px; display: block; }
+.contact-wrapper { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.info-section { margin-bottom: 30px; }
+.info-section h3 { color: #b30000; margin-top: 0; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 1rem; }
+.submit-btn { background: #b30000; color: white; border: none; padding: 12px 25px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: 0.3s; }
+.submit-btn:hover { background: #222; }
+footer { background: #222; color: #bbb; text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+<h1>गाउँले मिडिया</h1>
+<p>Gaunle Media</p>
+</header>
+<nav>
+<a href="index.html">होम</a>
+<a href="news.html">ताजा समाचार</a>
+<a href="#">स्थानीय</a>
+<a href="#">राष्ट्रिय</a>
+<a href="#">खेलकुद</a>
+<a href="#">शिक्षा</a>
+<a href="contact.html">सम्पर्क</a>
+</nav>
+<div class="container">
+    <div class="contact-wrapper">
+        <h2>हामीलाई सम्पर्क गर्नुहोस्</h2>
+        <p>तपाईंको गाउँ-ठाउँका समाचार, समस्या, वा विज्ञापनका लागि हामीलाई सम्झनुहोस्।</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        
+        <div class="info-section">
+            <h3>📍 हाम्रो कार्यालय</h3>
+            <p><strong>गाउँले मिडिया प्रा. लि.</strong><br>
+            वालिङ-०४, स्याङ्जा, नेपाल<br>
+            📞 फोन: +९७७-६३-XXXXXX, ९८XXXXXXXX<br>
+            ✉️ इमेल: info@gaunlemedia.com</p>
+        </div>
+        
+        <h3>✉️ सल्लाह, सुझाव वा समाचार पठाउनुहोस्</h3>
+        <form action="#" method="POST" onsubmit="alert('धन्यवाद! तपाईंको सन्देश प्राप्त भयो।'); return false;">
+            <div class="form-group">
+                <label for="name">तपाईंको नाम:</label>
+                <input type="text" id="name" required placeholder="यहाँ नाम लेख्नुहोस्">
+            </div>
+            <div class="form-group">
+                <label for="email">इमेल ठेगाना:</label>
+                <input type="email" id="email" required placeholder="यहाँ इमेल लेख्नुहोस्">
+            </div>
+            <div class="form-group">
+                <label for="message">सन्देश / समाचारको विवरण:</label>
+                <textarea id="message" rows="5" required placeholder="आफ्नो भनाइ वा समाचार यहाँ लेख्नुहोस्..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">💥 सन्देश पठाउनुहोस्</button>
+        </form>
+    </div>
+</div>
+<footer>© 2026 Gaunle Media | सबै अधिकार सुरक्षित।</footer>
+</body>
+</html>
