@@ -52,18 +52,18 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 5px 15px;
+    margin: 2px 4px;
     font-weight: bold;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 6px 10px; /* प्याडिङ अलि घटाएको */
+    font-size: 14px;    /* मोबाइलमा एउटै लाइनमा अटाउन फन्ट साइज सानो बनाएको */
     transition: 0.3s;
 }
+
 nav a:hover {
     background: #b30000;
     border-radius: 4px;
 }
-
-/* ब्रेकिङ न्युज सार्ने एनिमेसन (Ticker) */
 .breaking-container {
     background: #ffcc00;
     color: #000;
@@ -73,7 +73,9 @@ nav a:hover {
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
+    align-items: center; /* यो लाइन थप्नुहोस् */
 }
+
 .breaking-label {
     background: #b30000;
     color: white;
@@ -310,6 +312,22 @@ footer { background: #222; color: #bbb; text-align: center; padding: 25px; margi
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nepali:wght@400;700&display=swap" rel="stylesheet">
+/* समाचार बक्सलाई आकर्षक बनाउन */
+.content-area, section {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 15px;
+    margin: 15px;
+}
+/* समाचारको फोटोलाई बक्स अनुसार मिलाउन र कुना गोलो बनाउन */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
 <style>
 * { box-sizing: border-box; }
 body { margin: 0; font-family: 'Noto Sans Nepali', Arial, sans-serif; background: #f4f6f9; color: #333; line-height: 1.6; }
