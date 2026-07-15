@@ -312,24 +312,26 @@ footer { background: #222; color: #bbb; text-align: center; padding: 25px; margi
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Nepali:wght@400;700&display=swap" rel="stylesheet">
-/* समाचार बक्सलाई आकर्षक बनाउन */
-.content-area, section {
+<style>
+* { <style>
+  * { box-sizing: border-box; }
+  .content-area, section {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     padding: 15px;
-    margin: 15px;
-}
-/* समाचारको फोटोलाई बक्स अनुसार मिलाउन र कुना गोलो बनाउन */
-img {
+    margin: 15px; 
+  }
+  img {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-    margin-top: 10px;
-}
+    margin-top: 10px; 
+  }
 
-<style>
-* { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Noto Sans Nepali', Arial, sans-serif; }
+  ...
+ }
 body { margin: 0; font-family: 'Noto Sans Nepali', Arial, sans-serif; background: #f4f6f9; color: #333; line-height: 1.6; }
 header { background: #b30000; color: #fff; padding: 30px 20px; text-align: center; border-bottom: 4px solid #ffcc00; }
 header h1 { margin: 0; font-size: 2.5rem; }
